@@ -1,0 +1,5 @@
+Tournament Name:t
+Game:g
+Rounds:4
+Groups:4
+Players per Group:6
