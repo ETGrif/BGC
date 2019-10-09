@@ -22,7 +22,7 @@ public class Settings
 					{
 						if (indexFile.createNewFile())
 							{
-								System.out.println("Created regisrty file.");
+								System.out.println("Created settings file.");
 							}
 						else
 							{
@@ -44,7 +44,7 @@ public class Settings
 					}else{
 						//if the settings have already been made, load them
 						loadSettings();
-						System.out.println(maxRounds);
+						
 					}
 
 			}
@@ -126,16 +126,15 @@ public class Settings
 					gameName = file.nextLine().substring(5);
 					maxRounds = Integer.parseInt(file.nextLine().substring(7));
 					numberOfGroups = Integer.parseInt(file.nextLine().substring(7));
-					maxNumberOfPlayers = Integer.parseInt(file.nextLine().substring(7));
+					maxPlayersPerGroup = Integer.parseInt(file.nextLine().substring(18));
 
 
 					
 					
-					
+					file.close();
 					
 				} catch (FileNotFoundException e)
 				{
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			

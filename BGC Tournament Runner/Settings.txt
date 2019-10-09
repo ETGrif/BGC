@@ -1,5 +1,5 @@
-Tournament Name:t
-Game:g
-Rounds:4
+Tournament Name:Risk Tournament
+Game:Risk
+Rounds:3
 Groups:4
 Players per Group:6
