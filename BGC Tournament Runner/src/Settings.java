@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.Scanner;
 
-
 public class Settings
 	{
 
@@ -40,54 +39,54 @@ public class Settings
 					{
 						takeSettings();
 						writeSettingsFile();
-						
-					}else{
-						//if the settings have already been made, load them
+
+					}
+				else
+					{
+						// if the settings have already been made, load them
 						loadSettings();
-						
+
 					}
 
 			}
-		
-		public static void writeSettingsFile(){
 
-			 String fileName = "Settings.txt";
+		public static void writeSettingsFile()
+			{
 
-		        try {
-		            // Assume default encoding.
-		            FileWriter fileWriter = new FileWriter(fileName);
+				String fileName = "Settings.txt";
 
-		            // Always wrap FileWriter in BufferedWriter.
-		            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+				try
+					{
+						// Assume default encoding.
+						FileWriter fileWriter = new FileWriter(fileName);
 
-		            // Note that write() does not automatically
-		            // append a newline character.
+						// Always wrap FileWriter in BufferedWriter.
+						BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
-		           bufferedWriter.write("Tournament Name:"+tournamentName);
-		           bufferedWriter.newLine();
-		           bufferedWriter.write("Game:"+gameName);
-		           bufferedWriter.newLine();
-		           bufferedWriter.write("Rounds:"+maxRounds);
-		           bufferedWriter.newLine();
-		           bufferedWriter.write("Groups:"+numberOfGroups);
-		           bufferedWriter.newLine();
-		           bufferedWriter.write("Players per Group:"+maxPlayersPerGroup);
-		           
-		           
-		           
-		            // Always close files.
-		            bufferedWriter.close();
-		        	}
-		        
-		        catch(IOException ex) 
-		        	{
-		            System.out.println("Error writing to file '" + fileName + "'");
-		        	}
-			
-			
-		
-		}
-		
+						// Note that write() does not automatically
+						// append a newline character.
+
+						bufferedWriter.write("Tournament Name:" + tournamentName);
+						bufferedWriter.newLine();
+						bufferedWriter.write("Game:" + gameName);
+						bufferedWriter.newLine();
+						bufferedWriter.write("Rounds:" + maxRounds);
+						bufferedWriter.newLine();
+						bufferedWriter.write("Groups:" + numberOfGroups);
+						bufferedWriter.newLine();
+						bufferedWriter.write("Players per Group:" + maxPlayersPerGroup);
+
+						// Always close files.
+						bufferedWriter.close();
+					}
+
+				catch (IOException ex)
+					{
+						System.out.println("Error writing to file '" + fileName + "'");
+					}
+
+			}
+
 		public static void takeSettings()
 			{
 				Scanner userString = new Scanner(System.in);
@@ -114,32 +113,26 @@ public class Settings
 				userInt.close();
 			}
 
-		public static void loadSettings(){
-			
-			
-			try
-				{
-					Scanner file = new Scanner( new File( "Settings.txt" ) );
-					
-					
-					tournamentName = file.nextLine().substring(16);
-					gameName = file.nextLine().substring(5);
-					maxRounds = Integer.parseInt(file.nextLine().substring(7));
-					numberOfGroups = Integer.parseInt(file.nextLine().substring(7));
-					maxPlayersPerGroup = Integer.parseInt(file.nextLine().substring(18));
+		public static void loadSettings()
+			{
 
+				try
+					{
+						Scanner file = new Scanner(new File("Settings.txt"));
 
-					
-					
-					file.close();
-					
-				} catch (FileNotFoundException e)
-				{
-					e.printStackTrace();
-				}
-			
-			
-		}
-		
-		
+						tournamentName = file.nextLine().substring(16);
+						gameName = file.nextLine().substring(5);
+						maxRounds = Integer.parseInt(file.nextLine().substring(7));
+						numberOfGroups = Integer.parseInt(file.nextLine().substring(7));
+						maxPlayersPerGroup = Integer.parseInt(file.nextLine().substring(18));
+
+						file.close();
+
+					} catch (FileNotFoundException e)
+					{
+						e.printStackTrace();
+					}
+
+			}
+
 	}
