@@ -15,7 +15,7 @@ public class Driver
 				//TODO Round creation
 				System.out.println("Would you like to do?\n"
 						+ "[1]create new round\n"
-						+ "[2]tab round"
+						+ "[2]tab round\n"
 						+ "[3]look at player rankings\n"
 						+ "[4]exit");
 
@@ -24,6 +24,7 @@ public class Driver
 				switch(response){
 					case 1:
 						//TODO create round
+						RoundCreator.createRound(1);
 						break;
 						
 					case 2:
