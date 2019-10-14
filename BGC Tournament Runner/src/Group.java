@@ -14,6 +14,7 @@ public class Group
 			this.round = round;
 			this.group = group;
 			this.numOfPlayers = numOfPlayers;
+			players = new ArrayList<Player>();
 			
 			
 		}

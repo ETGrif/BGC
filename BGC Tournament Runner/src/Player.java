@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Player
 	{
@@ -6,12 +7,14 @@ public class Player
 		private int totalMatches;
 		private int wonMatches;
 		private int score;
+		private ArrayList<Player> encounters;
 		
 		public Player(String name){
 			this.name = name;
 			totalMatches = 0;
 			wonMatches = 0;
 			score = 0;
+			encounters = new ArrayList<Player>();
 			
 		}
 		
@@ -51,6 +54,26 @@ public class Player
 		public void setWonMatches(int wonMatches)
 			{
 				this.wonMatches = wonMatches;
+			}
+
+		public int getScore()
+			{
+				return score;
+			}
+
+		public void setScore(int score)
+			{
+				this.score = score;
+			}
+
+		public ArrayList<Player> getEncounters()
+			{
+				return encounters;
+			}
+
+		public void setEncounters(ArrayList<Player> encounters)
+			{
+				this.encounters = encounters;
 			}
 		
 		

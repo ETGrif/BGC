@@ -59,6 +59,9 @@ public class Driver
 				//registry
 				Registry.createRegisrtry();
 				
+				//encounters
+				
+				
 				
 				
 				

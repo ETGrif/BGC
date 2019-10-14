@@ -1,4 +1,4 @@
-Tournament Name:Risk Tournament
+Tournament Name:Risky
 Game:Risk
 Rounds:3
 Groups:4
