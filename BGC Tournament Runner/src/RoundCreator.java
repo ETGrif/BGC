@@ -46,16 +46,16 @@ public class RoundCreator
 				
 			}
 			
-//			//TODO print the round
-//			System.out.println("Round " + round);
-//			for(Group g: groups) {
-//				System.out.println("Group " +g.getGroup());
-//				for(Player p : g.getPlayers()) {
-//					System.out.println(p.getName());
-//					
-//				}
-//				
-//			}
+			//TODO print the round
+			System.out.println("Round " + round);
+			for(Group g: groups) {
+				System.out.println("Group " +g.getGroup());
+				for(Player p : g.getPlayers()) {
+					System.out.println(p.getName());
+					
+				}
+				
+			}
 			//TODO re-roll
 			
 			

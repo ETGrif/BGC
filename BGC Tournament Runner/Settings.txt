@@ -1,5 +1,5 @@
-Tournament Name:Risky
+Tournament Name:Risk
 Game:Risk
 Rounds:3
 Groups:4
-Players per Group:6
+Players per Group:5

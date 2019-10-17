@@ -72,7 +72,6 @@ public class Registry
 							players.add(new Player(playerName, totalMatches, wonMatches));
 						}
 
-						file.close();
 
 					} catch (FileNotFoundException e)
 					{
@@ -146,7 +145,6 @@ public class Registry
 
 					}
 
-				userString.close();
 
 			}
 

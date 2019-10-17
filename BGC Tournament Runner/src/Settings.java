@@ -109,8 +109,6 @@ public class Settings
 				System.out.println("How many players are allowed per group?");
 				maxPlayersPerGroup = userInt.nextInt();
 
-				userString.close();
-				userInt.close();
 			}
 
 		public static void loadSettings()
