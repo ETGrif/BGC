@@ -23,6 +23,7 @@ public class Player
 			this.totalMatches = totalMatches;
 			this.wonMatches = wonMatches;
 			score = (int) ((double)wonMatches/totalMatches*100);
+			encounters = new ArrayList<Player>();
 			
 		}
 
@@ -74,6 +75,11 @@ public class Player
 		public void setEncounters(ArrayList<Player> encounters)
 			{
 				this.encounters = encounters;
+			}
+		
+		public void addEncountered(Player encountered)
+			{
+				this.encounters.add(encountered);
 			}
 		
 		

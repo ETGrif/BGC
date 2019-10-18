@@ -24,7 +24,6 @@ public class Driver
 				
 				Scanner userInt = new Scanner(System.in);
 				int response = userInt.nextInt();
-				System.out.println(response);
 				switch(response){
 					case 1:
 							{
@@ -78,6 +77,8 @@ public class Driver
 				Registry.createRegisrtry();
 				
 				//encounters
+				Encounters.createEncounters();
+				
 				
 				
 				

@@ -15,6 +15,7 @@ public class Encounters
 
 				// try to create settings file
 				File indexFile = new File("Encounters.txt");
+				boolean madeFile = true;
 
 				try
 					{
@@ -22,13 +23,20 @@ public class Encounters
 							{
 								System.out.println("Created Encounters file.");
 							}
+						else
+							{
+								madeFile = false;
+							}
 					} catch (IOException e)
 					{
 
 						e.printStackTrace();
 					}
 
-				
+				if (!madeFile)
+					{
+						loadEncounters();
+					}
 
 			}
 
@@ -50,12 +58,17 @@ public class Encounters
 
 					for(Player p: Registry.players) {
 						bufferedWriter.write("New Player:");
+						bufferedWriter.newLine();
 						bufferedWriter.write(p.getName());
+						bufferedWriter.newLine();
 						bufferedWriter.write("Encountered:");
+						bufferedWriter.newLine();
 						for(Player e: p.getEncounters()) {
 							bufferedWriter.write(e.getName());
-							
+							bufferedWriter.newLine();
+
 						}
+						bufferedWriter.newLine();
 						
 						
 						
@@ -73,7 +86,7 @@ public class Encounters
 			}
 
 
-		public static void loadSettings()
+		public static void loadEncounters()
 			{
 
 				try
@@ -81,8 +94,35 @@ public class Encounters
 						Scanner file = new Scanner(new File("Encounters.txt"));
 
 						while(file.hasNextLine()) {
+							//"New Player:"
+							file.nextLine();
+							//player:
+							String playerName = file.nextLine();
 							
-							String player = file.nextLine();
+							//find player
+							Player player = findPlayerObj(playerName);
+							
+							//"Encountered:"
+							file.nextLine();
+							
+							boolean hasEncountered = true;
+							while(hasEncountered){
+								String encounteredName = file.nextLine();
+								
+								//test if its a blank line: --> move to next player
+								if(encounteredName.equals("")){
+									hasEncountered = false;
+								}else{
+								
+								//find player
+									Player encountered = findPlayerObj(encounteredName);
+									System.out.println(encountered);
+								//add the player to the encountered list
+									player.addEncountered(encountered);
+									
+								}	
+							}
+							
 							
 							
 							
@@ -98,6 +138,25 @@ public class Encounters
 					}
 
 			}
+		
+		
+		
+		
+		public static Player findPlayerObj(String name){
+			
+			for(Player p: Registry.players){
+				if(p.getName().equals(name)){
+					return p;
+					
+				}
+				
+			}
+			return null;
+			
+			
+			
+			
+		}
 
 	
 
