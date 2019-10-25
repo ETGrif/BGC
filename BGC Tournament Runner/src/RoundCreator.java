@@ -3,7 +3,22 @@ import java.util.ArrayList;
 public class RoundCreator
 	{
 
-		public static ArrayList<Group> createRound(int round) {
+		public static void generateRound(int Round){
+			//TODO create multiple rounds
+		
+			
+			//TODO find the one with the best Diversity score
+			
+			//TODO return it
+			
+			
+			
+		}
+		
+		
+		
+		
+		public static ArrayList<Group> populateRound(int round) {
 			//find numbers
 			int players = Registry.players.size();
 			int maxPlayers = Settings.maxPlayersPerGroup;
@@ -45,19 +60,17 @@ public class RoundCreator
 				}
 				
 			}
-			
-			//TODO print the round
-			System.out.println("Round " + round);
-			for(Group g: groups) {
-				System.out.println("Group " +g.getGroup());
-				for(Player p : g.getPlayers()) {
-					System.out.println(p.getName());
-					
-				}
-				
-			}
-			//TODO re-roll
-			
+//			
+//			System.out.println("Round " + round);
+//			for(Group g: groups) {
+//				System.out.println("Group " +g.getGroup());
+//				for(Player p : g.getPlayers()) {
+//					System.out.println(p.getName());
+//					
+//				}
+//				
+//			}
+//			
 			
 			return groups;
 			

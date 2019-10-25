@@ -13,7 +13,6 @@ public class Driver
 				firstOpenSetUp();
 
 				
-				//TODO Round creation
 				System.out.println("Would you like to do?\n"
 						+ "[1]create new round\n"
 						+ "[2]tab round\n"
@@ -28,7 +27,7 @@ public class Driver
 					case 1:
 							{
 						//TODO create round
-						RoundCreator.createRound(1);
+						RoundCreator.populateRound(1);
 						break;
 							}
 						

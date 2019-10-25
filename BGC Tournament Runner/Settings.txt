@@ -1,5 +1,5 @@
-Tournament Name:Pokey
-Game:Poker
-Rounds:4
-Groups:2
-Players per Group:5
+Tournament Name:Shutes
+Game:Shutes and Ladders
+Rounds:12
+Groups:7
+Players per Group:6

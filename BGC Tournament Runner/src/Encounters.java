@@ -43,6 +43,7 @@ public class Encounters
 		public static void writeEncountersFile()
 			{
 
+
 				String fileName = "Encounters.txt";
 
 				try
